@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src --ext ts,tsx,js,jsx --report-unused-disable-directives --max-warnings 0",
     "angular:dev": "ng serve --port 4200",
     "vue:dev": "vite --config vite.vue.config.ts",
     "flask:dev": "python backend/flask/app.py",
@@ -62,7 +62,7 @@
     "postcss": "^8.4.35",
     "prisma": "^5.10.2",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.2.2",
+    "typescript": "^5.4.5",
     "vite": "^5.4.11"
   }
 }
