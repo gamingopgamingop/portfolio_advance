@@ -9,6 +9,7 @@ import { About } from './pages/About';
 import { Projects } from './pages/Projects';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
+import Project from './components/Project';
 
 const queryClient = new QueryClient();
 
@@ -35,3 +36,15 @@ export function App() {
     </QueryClientProvider>
   );
 }
+
+const App: React.FC = () => {
+  return (
+    <div>
+      {projects.map((project, index) => (
+        <Project key={index} {...project} />
+      ))}
+    </div>
+  );
+};
+
+export default App;

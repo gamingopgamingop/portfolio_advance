@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "vite": "^6.0.3"
-=======
   "name": "sarthak-portfolio",
   "private": true,
   "version": "1.0.0",
@@ -11,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src --ext ts,tsx,js,jsx --report-unused-disable-directives --max-warnings 0",
     "angular:dev": "ng serve --port 4200",
     "vue:dev": "vite --config vite.vue.config.ts",
     "flask:dev": "python backend/flask/app.py",
@@ -67,6 +63,5 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.4.11"
->>>>>>> 0725075e476b9e9d08c82de0ecf03f4e6f2397ca
   }
 }
