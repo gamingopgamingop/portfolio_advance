@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import Project from './components/Project'; // Update the path if needed
 
 const projects = [
   {

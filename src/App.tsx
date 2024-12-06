@@ -43,9 +43,9 @@ const App: React.FC = () => {
     <div>
       {projects.map((project, index) => (
         <Project key={index} {...project} />
-        <ProjectList />
 
       ))}
+      <ProjectList />
     </div>
   );
 };
