@@ -10,6 +10,7 @@ import { Projects } from './pages/Projects';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
 import Project from './components/Project';
+import ProjectList from './components/ProjectList';
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,8 @@ const App: React.FC = () => {
     <div>
       {projects.map((project, index) => (
         <Project key={index} {...project} />
+        <ProjectList />
+
       ))}
     </div>
   );
