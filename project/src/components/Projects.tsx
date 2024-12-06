@@ -76,3 +76,15 @@ function ProjectCard({ title, description, image, tech, github, demo }) {
     </div>
   );
 }
+
+const App: React.FC = () => {
+  return (
+    <div>
+      {projects.map((project, index) => (
+        <Project key={index} {...project} />
+      ))}
+    </div>
+  );
+};
+
+export default App;
