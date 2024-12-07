@@ -1,6 +1,6 @@
 // src/components/ProjectList.tsx
 import React from 'react';
-import Project from './Project';
+import Projects from './Projects';
 
 const ProjectList: React.FC = () => {
   const projects = [

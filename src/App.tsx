@@ -9,7 +9,7 @@ import { About } from './pages/About';
 import { Projects } from './pages/Projects';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
-import Project from './components/Project';
+import Project from './components/Projects';
 import ProjectList from './components/ProjectList';
 
 const queryClient = new QueryClient();
@@ -38,16 +38,16 @@ export function App() {
   );
 }
 
-const App: React.FC = () => {
+const ProjectDisplay: React.FC = () => {  // Renamed this component to `ProjectDisplay`
+  const projects = []; // Add your project data here
   return (
     <div>
       {projects.map((project, index) => (
         <Project key={index} {...project} />
-
       ))}
       <ProjectList />
     </div>
   );
 };
 
-export default App;
+export default App; // Only export App component
