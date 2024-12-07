@@ -1,9 +1,16 @@
-// src/components/ProjectList.tsx
-import React from 'react';
-import Projects from './Projects';
+import ProjectCard from './Projects'; // Make sure the path is correct for ProjectCard component
+
+interface ProjectData {
+  title: string;
+  description: string;
+  image: string;
+  tech: string[];
+  github: string;
+  demo: string;
+}
 
 const ProjectList: React.FC = () => {
-  const projects = [
+  const projects: ProjectData[] = [
     {
       title: "Project 1",
       description: "Description of Project 1",
@@ -22,14 +29,18 @@ const ProjectList: React.FC = () => {
     }
   ];
 
-  const handleClick = (item: { title: string }, index: number) => {
-    console.log(`Clicked on project: ${item.title}, at index: ${index}`);
-  };
-
   return (
     <div>
       {projects.map((project, index) => (
-        <Project key={index} project={project} index={index} onClick={handleClick} />
+        <ProjectCard
+          key={index}
+          title={project.title}
+          description={project.description}
+          image={project.image}
+          tech={project.tech}
+          github={project.github}
+          demo={project.demo}
+        />
       ))}
     </div>
   );

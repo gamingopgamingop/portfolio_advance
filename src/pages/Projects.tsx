@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
@@ -36,6 +36,16 @@ const projects = [
   }
 ];
 
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  image: string;
+  tech: string[];
+  github: string;
+  demo: string;
+}
+
+
 export function Projects() {
   return (
     <div className="pt-16">
@@ -63,7 +73,7 @@ export function Projects() {
   );
 }
 
-function ProjectCard({ title, description, image, tech, github, demo }) {
+function ProjectCard({ title, description, image, tech, github, demo }: ProjectCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
       <img src={image} alt={title} className="w-full h-48 object-cover" />

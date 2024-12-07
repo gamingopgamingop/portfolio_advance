@@ -1,6 +1,6 @@
 // src/components/Project.tsx
 
-import React from 'react';
+// import React from 'react';
 
 type ProjectProps = {
   title: string;

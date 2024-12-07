@@ -14,7 +14,7 @@ export default defineConfig({
     sourcemap: true,
     target: 'esnext', // Set the build target to modern JS for better module handling
     rollupOptions: {
-      input: '/path/to/your/main.tsx', // Adjust to your main entry point if needed
+      input: 'src/main.tsx', // Ensure this path is correct
     }
   },
   server: {

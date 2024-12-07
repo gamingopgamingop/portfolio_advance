@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "start": "vite",
+    "clean": "rimraf node_modules dist",
     "start:watch": "nodemon --exec vite",
     "lint": "eslint src --ext ts,tsx,js,jsx --report-unused-disable-directives --max-warnings 0",
     "angular:dev": "ng serve --port 4200",
@@ -65,6 +66,7 @@
     "nodemon": "^3.1.7",
     "postcss": "^8.4.35",
     "prisma": "^5.10.2",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.5",
     "vite": "^5.4.11"
