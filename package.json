@@ -29,6 +29,7 @@
     "axios": "^1.6.7",
     "better-sqlite3": "^9.4.1",
     "firebase": "^10.14.1",
+    "firebase-admin": "^13.0.1",
     "framer-motion": "^11.0.8",
     "lucide-react": "^0.468.0",
     "mongodb": "^6.3.0",
@@ -69,7 +70,10 @@
     "vite": "^5.4.11"
   },
   "nodemonConfig": {
-    "watch": ["src", "vite.config.js"],
+    "watch": [
+      "src",
+      "vite.config.js"
+    ],
     "ext": "js,jsx,ts,tsx,css,html",
     "execMap": {
       "js": "vite"
