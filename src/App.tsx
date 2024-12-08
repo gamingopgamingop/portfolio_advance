@@ -6,7 +6,7 @@ import { ChatBot } from './components/ChatBot';
 import { BackendStatus } from './components/BackendStatus';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
-import { projects } from './pages/Projects';
+import { Projects } from './pages/Projects';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
 // import { Projects } from './components/Projects';
