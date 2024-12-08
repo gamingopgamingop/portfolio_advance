@@ -1,6 +1,6 @@
 // import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-import  { useState , useEffect } from 'react';
+import  { useState , useEffect , useMemo} from 'react';
 
 // Loading Spinner Component
 const LoadingSpinner = () => (
@@ -103,6 +103,8 @@ export function Projects() {
   const [filter, setFilter] = useState('All');
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'true'); // Check if dark mode is set in local storage
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
 
   // Simulate loading and apply filter
   useEffect(() => {
@@ -112,10 +114,10 @@ export function Projects() {
     return () => clearTimeout(timer);
   }, []);
 
-  const filteredProjects =
-    filter === 'All'
-      ? projects
-      : projects.filter((project) => project.tech.includes(filter));
+  const filteredProjects = useMemo(() =>
+  filter === 'All' ? projects : projects.filter((project) => project.tech.includes(filter)),
+  [filter, projects]
+);
 
   if (loading) {
     return <LoadingSpinner />;
@@ -152,9 +154,10 @@ export function Projects() {
             <option value="Python">Python</option>
           </select>
           <Button
-            label={darkMode ? 'Light Mode' : 'Dark Mode'}
-            onClick={() => setDarkMode((prev) => !prev)}
-            className="border border-gray-400"
+          label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          onClick={() => setDarkMode((prev) => !prev)}
+          className="border border-gray-400"
+          aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
           />
         </div>
         </div>
