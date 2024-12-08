@@ -87,4 +87,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, te
   );
 };
 
+// Error Boundary for better error handling
+class ErrorBoundary extends React.Component {
+  state = { hasError: false };
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error("Error caught by ErrorBoundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h2>Something went wrong. Please try again later.</h2>;
+    }
+    return this.props.children;
+  }
+}
+
+// Wrap the Projects component with ErrorBoundary to catch any errors
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <Projects />
+    </ErrorBoundary>
+  );
+}
+
+
 export default ProjectCard;
