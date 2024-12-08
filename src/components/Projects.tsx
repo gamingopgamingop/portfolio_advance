@@ -1,7 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+// import Projects from './components/Projects'; // Update the path if needed
 
-const projects = [
+const projects : { title: string; description: string; image: string; tech: string[]; github: string; demo: string }[] = [
   {
     title: 'E-Commerce Platform',
     description: 'A modern e-commerce platform built with React and Node.js',
@@ -34,8 +35,17 @@ export function Projects() {
     </section>
   );
 }
+// D:\project-bolt-sb1-azwnpc (5)\project\src\components\Projects.tsx
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  image: string;
+  tech: string[];
+  github: string;
+  demo: string;
+}
 
-function ProjectCard({ title, description, image, tech, github, demo }) {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, tech, github, demo }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -75,4 +85,36 @@ function ProjectCard({ title, description, image, tech, github, demo }) {
       </div>
     </div>
   );
+};
+
+// Error Boundary for better error handling
+class ErrorBoundary extends React.Component {
+  state = { hasError: false };
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error("Error caught by ErrorBoundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h2>Something went wrong. Please try again later.</h2>;
+    }
+    return this.props.children;
+  }
 }
+
+// Wrap the Projects component with ErrorBoundary to catch any errors
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <Projects />
+    </ErrorBoundary>
+  );
+}
+
+
+export default ProjectCard;
