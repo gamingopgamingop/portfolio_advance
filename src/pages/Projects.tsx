@@ -103,7 +103,6 @@ export function Projects() {
   const [filter, setFilter] = useState('All');
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'true'); // Check if dark mode is set in local storage
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
 
   // Simulate loading and apply filter
@@ -176,12 +175,14 @@ export function Projects() {
 
 function ProjectCard({ title, description, image, tech, github, demo }: ProjectCardProps) {
   console.log(`Rendering ProjectCard:`, { title, description, tech, github, demo }); // For debugging props
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" id={`project-card-${title.replace(/\s+/g, '-').toLowerCase()}`} data-testid={`project-${title.replace(/\s+/g, '-').toLowerCase()}`}
 
 >
-      <img src={image} alt={`Screenshot of ${title}`} className="w-full h-48 object-cover"  loading="lazy" onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/800x400')}
+      <img src={image} alt={`Screenshot of ${title}`} className="w-full h-48 object-cover"  loading="lazy" onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/800x400')} onLoad={() => setIsImageLoaded(true)}
+
  />
       <div className="p-6">
         <h3 className="text-2xl font-bold mb-2">{title}</h3>
