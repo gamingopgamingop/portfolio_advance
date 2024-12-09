@@ -1,4 +1,6 @@
-import ProjectCard from './Projects'; // Make sure the path is correct for ProjectCard component
+// In ProjectList.tsx
+//import React from 'react';
+import ProjectCard from './Projects'; // Make sure the path is correct
 
 interface ProjectData {
   title: string;
@@ -9,31 +11,16 @@ interface ProjectData {
   demo: string;
 }
 
-const ProjectList: React.FC = () => {
-  const projects: ProjectData[] = [
-    {
-      title: "Project 1",
-      description: "Description of Project 1",
-      image: "/path/to/image1.jpg",
-      tech: ["React", "TypeScript", "Node.js"],
-      github: "https://github.com/username/project1",
-      demo: "https://project1.com"
-    },
-    {
-      title: "Project 2",
-      description: "Description of Project 2",
-      image: "/path/to/image2.jpg",
-      tech: ["Vue", "JavaScript", "Express"],
-      github: "https://github.com/username/project2",
-      demo: "https://project2.com"
-    }
-  ];
+interface ProjectListProps {
+  projects: ProjectData[];
+}
 
+const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
   return (
     <div>
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <ProjectCard
-          key={index}
+          key={project.title} // or use a unique identifier if available
           title={project.title}
           description={project.description}
           image={project.image}

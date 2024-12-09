@@ -173,19 +173,12 @@ if (loading) {
             <option value="Node.js">Node.js</option>
             <option value="Python">Python</option>
           </select>
-          <Button
-  label={
-    buttonLoading ? (
-      <span className="flex items-center gap-2">
-        <Spinner /> Switching...
-      </span>
-    ) : darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+          <Button label={ buttonLoading ? (<span className="flex items-center gap-2"> <Spinner /> Switching... </span>) : darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'
   }
-  onClick={handleDarkModeToggle}
-  className="border border-gray-400"
-  ariaLabel={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-  disabled={buttonLoading}
-/>
+        onClick={handleDarkModeToggle}
+        className="border border-gray-400"
+        ariaLabel={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+        disabled={buttonLoading} />
 </div>
 </div>
 <section className="py-20">
@@ -204,7 +197,7 @@ if (loading) {
 
 function ProjectCard({ title, description, image, tech, github, demo }: ProjectCardProps) {
   console.log(`Rendering ProjectCard:`, { title, description, tech, github, demo }); // For debugging props
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [IsImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow transform hover:scale-105" id={`project-card-${title.replace(/\s+/g, '-').toLowerCase()}`} data-testid={`project-${title.replace(/\s+/g, '-').toLowerCase()}`}

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 // import Projects from './components/Projects'; // Update the path if needed
 
@@ -115,6 +115,4 @@ export default function App() {
     </ErrorBoundary>
   );
 }
-
-
 export default ProjectCard;
