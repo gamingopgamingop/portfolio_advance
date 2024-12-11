@@ -95,6 +95,86 @@ const projectsData = [
     tech: ['React', 'Web3.js', 'Solidity', 'Node.js', 'PostgreSQL'],
     github: 'https://github.com',
     demo: 'https://demo.com'
+  },
+  {
+    title: 'AR Navigation App',
+    description: 'Augmented reality-based navigation app for real-time directions',
+    image: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'AR.js', 'Mapbox', 'Firebase'],
+    github: 'https://github.com/your-github-repo-link',
+    demo: 'https://your-live-demo-link'
+  },
+  {
+    title: 'Online Learning Platform',
+    description: 'An interactive online platform for courses and live sessions',
+    image: 'https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+    github: 'https://github.com/your-github-repo-link',
+    demo: 'https://your-live-demo-link'
+  },
+  {
+    title: 'Task Automation Tool',
+    description: 'Automation tool to schedule and execute repetitive tasks',
+    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=800',
+    tech: ['Node.js', 'Python', 'Docker', 'Redis'],
+    github: 'https://github.com/your-github-repo-link',
+    demo: 'https://your-live-demo-link'
+  },
+  {
+    title: 'Real-Time Chat Application',
+    description: 'A real-time chat app with support for private and group messages, user authentication, and notifications.',
+    image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'Node.js', 'Express.js', 'WebSockets', 'MongoDB'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Expense Tracker App',
+    description: 'A web app to track personal expenses and generate reports with data visualizations.',
+    image: 'https://images.unsplash.com/photo-1621361365424-06f0e1eb5c49?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'Node.js', 'MongoDB', 'Chart.js', 'Material-UI'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Social Media Dashboard',
+    description: 'A dashboard to manage social media posts, schedule content, and analyze engagement across multiple platforms.',
+    image: 'https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'OAuth2.0'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'A personal website to showcase skills, projects, and achievements with responsive design and interactive UI.',
+    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Weather Forecast App',
+    description: 'A weather app that shows real-time weather information and forecasts using an external API.',
+    image: 'https://images.unsplash.com/photo-1499673610122-01c7122c5dcb?q=80&w=1927&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'Node.js', 'OpenWeatherMap API'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Blog Website',
+    description: 'A blogging website with a simple and clean design for publishing articles and interacting with readers.',
+    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['WordPress', 'PHP', 'MySQL'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Fitness Tracker App',
+    description: 'A mobile app that helps users track their fitness activities, goals, and progress over time.',
+    image: 'https://images.unsplash.com/photo-1508317469940-e3de49ba902e?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React Native', 'Node.js', 'MongoDB'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
   }
 ];
 
@@ -207,7 +287,7 @@ function ProjectCard({ title, description, image, tech, github, demo }: ProjectC
 
  />
       <div className="p-6">
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+      <h3 className="text-2xl font-bold mb-2 dark:text-black tracking-wide px-4 py-2 transition-all duration-300 ease-in-out hover:text-gray-300 dark:hover:text-gray-500 shadow-md rounded-lg">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {tech.map((item, index) => (

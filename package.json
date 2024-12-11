@@ -41,6 +41,7 @@
     "react-dom": "^18.3.1",
     "react-feather": "^2.0.10",
     "react-firebase-hooks": "^5.1.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^5.4.0",
     "react-paginate": "^8.2.0",
     "react-query": "^3.39.3",
@@ -84,5 +85,27 @@
     "execMap": {
       "js": "vite"
     }
-  }
+  },
+  "description": "porfolio",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gamingopgamingop/portfolio_advance.git"
+  },
+  "keywords": [
+    "portfolio",
+    "next",
+    "js",
+    "react",
+    "vue",
+    "angular",
+    "ai",
+    "advance"
+  ],
+  "author": "sarthak bansal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gamingopgamingop/portfolio_advance/issues"
+  },
+  "homepage": "https://github.com/gamingopgamingop/portfolio_advance#readme"
 }
