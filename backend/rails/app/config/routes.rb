@@ -1,0 +1,5 @@
+# config/routes.rb
+Rails.application.routes.draw do
+  resources :blog_posts
+  root to: 'blog_posts#index'
+end

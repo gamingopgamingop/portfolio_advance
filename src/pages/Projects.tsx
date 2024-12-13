@@ -175,7 +175,40 @@ const projectsData = [
     tech: ['React Native', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     demo: 'https://demo.com'
-  }
+  },
+  {
+    title: 'Recipe Finder App',
+    description: 'A recipe search app that helps users find recipes based on ingredients and preferences.',
+    image: 'https://images.unsplash.com/photo-1595675024853-0f3ec9098ac7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'Node.js', 'Edamam API'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Music Streaming App',
+    description: 'A music streaming platform with support for playlists, search, and user recommendations.',
+    image: 'https://images.unsplash.com/photo-1508830524289-0adcbe822b40?q=80&w=2025&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tech: ['React', 'Node.js', 'Spotify API', 'MongoDB'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Personal Finance Dashboard',
+    description: 'A dashboard to track personal finances, including income, expenses, and investments.',
+    image: 'https://images.unsplash.com/photo-1612382106187-8c0d1a742ea1?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjk3OXwwfDF8c2VhcmNofDJ8fGZpdG5lc3MgdHJhY2tpbmcgdGV4dHxlbnwwfHx8fDE2NzEzNzYwMjM',
+    tech: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  {
+	 title: 'AI-Powered Content Generator',
+	 description: 'A web app that generates high-quality articles based on user input using AI.',
+	 image: 'https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+	 tech: ['React', 'Node.js', 'OpenAI API', 'MongoDB'],
+	 github: 'https://github.com',
+	 demo: 'https://demo.com'
+}
+
 ];
 
 interface ProjectCardProps {

@@ -1,0 +1,28 @@
+<!-- app/views/blog_posts/index.html.erb -->
+<h1>Blog Posts</h1>
+
+<%= link_to 'New Blog Post', new_blog_post_path, class: 'btn btn-primary' %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Published</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blog_posts.each do |blog_post| %>
+      <tr>
+        <td><%= link_to blog_post.title, blog_post %></td>
+        <td><%= blog_post.author %></td>
+        <td><%= blog_post.published ? 'Yes' : 'No' %></td>
+        <td>
+          <%= link_to 'Edit', edit_blog_post_path(blog_post) %> |
+          <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { Calendar, Clock, User, Search, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ReactPaginate from 'react-paginate';
+import { Helmet } from 'react-helmet';
+import { GetStaticProps } from 'next';
+import React, { Component } from 'react';
+
 
 // Debouncing function to handle search input changes
 function useDebouncedValue(value: string, delay: number) {
@@ -20,6 +24,10 @@ function useDebouncedValue(value: string, delay: number) {
   return debouncedValue;
 }
 
+interface BlogProps {
+  posts: BlogPost[];
+}
+
 type BlogPost = {
   title: string;
   excerpt: string;
@@ -30,9 +38,6 @@ type BlogPost = {
   image: string;
 };
 
-interface BlogProps {
-  posts: BlogPost[];
-}
 
 const blogPosts: BlogPost[] = [
   {
@@ -129,6 +134,7 @@ const blogPosts: BlogPost[] = [
 
 // Blog component
 export function Blog({ posts }: BlogProps) {
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -284,19 +290,32 @@ export function BlogPage() {
 
   // Paginate
   useEffect(() => {
+    console.log('Filtered Posts:', filteredPosts);
     const newVisiblePosts = sortedPosts.slice(
       currentPage * postsPerPage,
       (currentPage + 1) * postsPerPage
     );
+    console.log('Visible Posts:', newVisiblePosts); // Add log to see the sliced posts
     setVisiblePosts(newVisiblePosts);
   }, [currentPage, sortedPosts]);
+  console.log('Filtered Posts:', filteredPosts);
 
+
+  // Handle page change
   const handlePageChange = ({ selected }: { selected: number }) => {
     setCurrentPage(selected);
   };
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto py-10 px-4">
+	   <Helmet>
+        <title>Blog Page - Sarthak Bansal</title>
+        <meta name="description" content="Learn programming, web development, and more with articles by Sarthak Bansal." />
+        <meta name="keywords" content="React, JavaScript, Node.js, CSS, TypeScript, web development, programming blog" />
+        <meta property="og:title" content="Blog - Sarthak Bansal" />
+        <meta property="og:description" content="Learn programming and development topics in this blog by Sarthak Bansal." />
+      </Helmet>
+
       <BlogSearch
         searchTerm={searchTerm}
         onSearchChange={setSearchTerm}
@@ -304,24 +323,51 @@ export function BlogPage() {
         selectedTag={selectedTag}
         onTagChange={setSelectedTag}
       />
-      {filteredPosts.length === 0 ? (
-        <p className="text-center text-xl text-gray-600">No matching results found.</p>
-      ) : (
-        <>
-          <Blog posts={visiblePosts} />
-          <ReactPaginate
+      <Blog posts={visiblePosts} />
+      {filteredPosts.length > postsPerPage && (
+        <ReactPaginate
+            previousLabel={'Previous'}
+            nextLabel={'Next'}
+            breakLabel={'...'}
+            breakClassName={'break-me'}
             pageCount={Math.ceil(filteredPosts.length / postsPerPage)}
-            pageRangeDisplayed={2}
-            marginPagesDisplayed={1}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={5}
             onPageChange={handlePageChange}
-            containerClassName="flex justify-center mt-10"
-            activeClassName="bg-cyan-500 text-white px-4 py-2 rounded-md"
-            previousClassName="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-md"
-            nextClassName="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-md"
-            disabledClassName="text-gray-400 cursor-not-allowed"
+            containerClassName={'pagination'}
+            pageClassName={'page-item'}
+            pageLinkClassName={'page-link'}
+            previousClassName={'previous'}
+            nextClassName={'next'}
+            disabledClassName={'disabled'}
           />
-        </>
+
       )}
     </div>
   );
 }
+
+class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error("Error caught in error boundary:", error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong. Please try again later.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;

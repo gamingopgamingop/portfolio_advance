@@ -1,0 +1,8 @@
+<!-- app/views/blog_posts/show.html.erb -->
+<h1><%= @blog_post.title %></h1>
+<p><%= @blog_post.content %></p>
+<p><strong>Author:</strong> <%= @blog_post.author %></p>
+<p><strong>Published:</strong> <%= @blog_post.published ? 'Yes' : 'No' %></p>
+
+<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+<%= link_to 'Back to list', blog_posts_path %>

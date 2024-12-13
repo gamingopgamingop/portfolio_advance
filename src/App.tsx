@@ -7,8 +7,10 @@ import { BackendStatus } from './components/BackendStatus';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Projects } from './pages/Projects';
-import { Blog } from './pages/Blog';
+import { Blog} from './pages/Blog';
 import { Contact } from './pages/Contact';
+import { useQuery } from 'react-query';
+
 // import { Projects } from './components/Projects';
 // import ProjectList from './components/ProjectList';
 
