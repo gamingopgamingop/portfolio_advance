@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "description": "A brief description of your project",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sarthak Bansal",
+      "email": "gamingopgamingop67@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "YourNamespace\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "monolog/monolog": "^2.3",  // Example of logging library dependency
+    "symfony/http-foundation": "^5.2",  // Symfony HTTP component (common in PHP frameworks)
+    "guzzlehttp/guzzle": "^7.0"  // Example of HTTP client dependency for making requests
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",  // Example for PHPUnit for testing
+    "symfony/var-dumper": "^5.2" // Example for Symfony's var dumper (useful in dev environments)
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "echo 'Composer install completed'"
+    ],
+    "post-update-cmd": [
+      "echo 'Composer update completed'"
+    ]
+  }
+}

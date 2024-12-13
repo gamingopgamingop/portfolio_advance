@@ -195,7 +195,7 @@ const projectsData = [
   {
     title: 'Personal Finance Dashboard',
     description: 'A dashboard to track personal finances, including income, expenses, and investments.',
-    image: 'https://images.unsplash.com/photo-1612382106187-8c0d1a742ea1?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjk3OXwwfDF8c2VhcmNofDJ8fGZpdG5lc3MgdHJhY2tpbmcgdGV4dHxlbnwwfHx8fDE2NzEzNzYwMjM',
+    image: 'https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tech: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
     github: 'https://github.com',
     demo: 'https://demo.com'

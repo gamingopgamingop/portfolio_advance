@@ -107,5 +107,7 @@
   "bugs": {
     "url": "https://github.com/gamingopgamingop/portfolio_advance/issues"
   },
-  "homepage": "https://github.com/gamingopgamingop/portfolio_advance#readme"
+  "homepage": "https://github.com/gamingopgamingop/portfolio_advance#readme",
+  "proxy": "http://localhost:5000"
+
 }
